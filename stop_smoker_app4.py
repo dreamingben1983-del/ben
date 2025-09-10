@@ -25,7 +25,7 @@ st.title("🚭금연 성공 가능성 예측기 🚭")
 def load_and_preprocess_data():
     try:
         # 인코딩을 'cp949'로 지정하여 파일을 로드
-        df = pd.read_csv('stop_smoking.csv', encoding='cp949')
+        df = pd.read_csv('stop_smoker.csv', encoding='cp949')
 
         df.columns = ['provider_type', 'region', 'service_type', 'provider', 'birth_year_group', 'gender', 'reg_year', 'reg_month',
                       'reg_type', 'quit_year', 'quit_month', 'counseling_count', 'status', 'completion_year', 'completion_month',
@@ -159,3 +159,4 @@ with tab3:
         st.session_state['predicted'] = True
         st.session_state['success_rate'] = prediction_proba
         st.session_state['counseling_count'] = counseling
+
