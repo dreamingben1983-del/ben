@@ -25,7 +25,7 @@ st.title("🚭금연 성공 가능성 예측기 🚭")
 def load_and_preprocess_data():
     try:
         # MySQL 연결 대신 CSV 파일 직접 로드
-        df = pd.read_csv('smoke_ulsan.csv')
+        df = pd.read_csv('stop_smoker.csv')
 
         df.columns = ['provider_type', 'region', 'service_type', 'provider', 'birth_year_group', 'gender', 'reg_year', 'reg_month',
                       'reg_type', 'quit_year', 'quit_month', 'counseling_count', 'status', 'completion_year', 'completion_month',
@@ -374,3 +374,4 @@ with tab6:
         }))
     else:
         st.info("먼저 예측 탭에서 '예측하기' 버튼을 눌러주세요.")
+
